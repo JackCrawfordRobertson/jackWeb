@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import "./HomeTop.css"
 import WorkCard from "../Work/WorkCard"
 import EmissionCalculator from "../Emission/EmissionCalculator"
-//import LoadingScreen from "../LoadingScreen/LoadingScreen"; 
-
+//import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 //Branding
 import BottomLogo from "../../images/Projects/BottomLogo/White-logo.png"
@@ -47,22 +46,22 @@ const HomeTop = () => {
   }
 
   //useEffect(() => {
-    //const timer = setTimeout(() => {
-      //setIsLoading(false);
-    //}, 3000); 
+  //const timer = setTimeout(() => {
+  //setIsLoading(false);
+  //}, 3000);
 
-    //return () => clearTimeout(timer); 
- // }, []);
+  //return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="home-top-container" style={{ fontSize: `${fontSize}px` }}>
-       
       <h1 className="title">
         Hello, I'm Jack!{" "}
         <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
       </h1>
       <h2 className="subhead">I'm an information designer.</h2>
       <div className="body-copy">
+        {/* About me */}
         <p>
           Who explores how storytelling and narratives can be used to examine
           complex systems, like economics, politics and much more! My work is
@@ -73,7 +72,7 @@ const HomeTop = () => {
           <i class="fa fa-object-group" aria-hidden="true"></i>
         </p>
         <h2 className="subhead">What i'm doing.</h2>
-
+        {/* what im doing now */}
         <p>
           I've gone back to school! I am studdying an MA in Digital Direction at
           the <a href="https://www.rca.ac.uk/">Royal College of Art</a> where
@@ -84,8 +83,8 @@ const HomeTop = () => {
           company to help them transition to an automation!{" "}
           <i className="fa fa-tint" aria-hidden="true"></i>
         </p>
-
         <h2 className="subhead">What i've done.</h2>
+        {/* Girardot */}
         <p>
           In 2022/2023, I was having fun at{" "}
           <a href="https://girardot.co.uk/">Girardot Design,</a> where I had the
@@ -96,6 +95,7 @@ const HomeTop = () => {
           work we've done and feel chufed to have worked with such distinguished
           clients. <i class="fa fa-briefcase" aria-hidden="true"></i>
         </p>
+        {/* Middel east */}
         <p>
           In 2021, I noticed a significant reduction in the Western media's
           coverage of the Middle East. This inspired me to pursue my
@@ -111,11 +111,23 @@ const HomeTop = () => {
                 ba6Image
               )
             } // Use the imported image variable here
-            onKeyPress={() => handleLinkClick(ba1Image, ba2Image, ba3Image,ba4Image,ba5Image,ba6Image)} 
-            role="button" 
+            onKeyPress={() =>
+              handleLinkClick(
+                ba1Image,
+                ba2Image,
+                ba3Image,
+                ba4Image,
+                ba5Image,
+                ba6Image
+              )
+            }
+            role="button"
             tabIndex="0"
-            style={{ cursor: 'pointer', color: 'white', textDecoration: 'underline' }}
-            
+            style={{
+              cursor: "pointer",
+              color: "white",
+              textDecoration: "underline",
+            }}
           >
             "A New Way of Seeing: Visualizing the Middle East Conflict,"
           </span>
@@ -123,6 +135,7 @@ const HomeTop = () => {
           understand the human and political scale of the region's destruction
           and displacement. <i class="fa fa-circle" aria-hidden="true"></i>
         </p>
+        {/* IOT */}
         <p>
           My exploration in 2020 further led me to the texts of Jeremy Rifkin
           text presents an overview of current social, economic and
@@ -131,9 +144,22 @@ const HomeTop = () => {
           ideas more accessible, I created{" "}
           <span
             onClick={() => handleLinkClick(IoTVid01, IoTVid02)} // Use the imported image variable here
-            style={{ cursor: 'pointer', color: 'white', textDecoration: 'underline' }}
-            onKeyPress={() => handleLinkClick(ba1Image, ba2Image, ba3Image,ba4Image,ba5Image,ba6Image)} 
-            role="button" 
+            style={{
+              cursor: "pointer",
+              color: "white",
+              textDecoration: "underline",
+            }}
+            onKeyPress={() =>
+              handleLinkClick(
+                ba1Image,
+                ba2Image,
+                ba3Image,
+                ba4Image,
+                ba5Image,
+                ba6Image
+              )
+            }
+            role="button"
             tabIndex="0"
           >
             "The Rifkin Lens: A Glimpse into What's Next,"{" "}
@@ -143,16 +169,30 @@ const HomeTop = () => {
           implications for our future.{" "}
           <i class="fa fa-laptop" aria-hidden="true"></i>
         </p>
+        {/* TLF */}
         <p>
           Back in 2019 while at Central Saint Martins, I collaborated with
           Transport for London on a project to promote cycling in the city. My
           proposal was{" "}
           <span
             onClick={() => handleLinkClick(TFL06, TFL01, TFL02, TFL03, TFL04)} // Use the imported image variable here
-            onKeyPress={() => handleLinkClick(ba1Image, ba2Image, ba3Image,ba4Image,ba5Image,ba6Image)} 
-            role="button" 
+            onKeyPress={() =>
+              handleLinkClick(
+                ba1Image,
+                ba2Image,
+                ba3Image,
+                ba4Image,
+                ba5Image,
+                ba6Image
+              )
+            }
+            role="button"
             tabIndex="0"
-            style={{ cursor: 'pointer', color: 'white', textDecoration: 'underline',}}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              textDecoration: "underline",
+            }}
           >
             "Explore Your City: Your Two-Hour Starter Kit,"
           </span>{" "}
@@ -160,6 +200,29 @@ const HomeTop = () => {
           two-hour access card for free use of Santander Cycles. This helps
           students get to know the city and make connections with their new
           flatmates. <i class="fa fa-bicycle" aria-hidden="true"></i>
+        </p>
+        <h2 className="subhead">Other collaborators.</h2>
+        {/* All */}
+        <p>
+          ICEAwards -{" "}
+          <i>
+            The ICEAwards UK honor the best in-house corporate event planners
+            and celebrate their passion for excellence.{" "}
+          </i>{" "}
+          <br></br>
+          <br></br>
+          Capgemini -{" "}
+          <i>
+            University Week brings together the best in the corporate training
+            industry to collaborate and learn from each other.
+          </i>
+          <br></br>
+          <br></br>
+          Integrated Care System Cornwall -{" "}
+          <i>
+            Shared resources, equal access, and community partnership - a
+            blueprint for health equity.
+          </i>
         </p>
         <div className="sliderContainer">
           <i className="fa fa-text-height" aria-hidden="true"></i>
