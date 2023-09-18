@@ -1,12 +1,6 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(
@@ -17,6 +11,8 @@ function Seo({ description, title, children }) {
             title
             description
             author
+            siteUrl
+            twitterUsername // Add your Twitter handle here
           }
         }
       }
@@ -24,21 +20,29 @@ function Seo({ description, title, children }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = site.siteMetadata.title
+  const url = site.siteMetadata.siteUrl
+  const twitterUsername = site.siteMetadata.twitterUsername // Retrieve Twitter handle
 
   return (
-    <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+    <Helmet
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      defaultTitle={defaultTitle}
+    >
+      <html lang="en" />
+      <title>{title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:creator" content={twitterUsername} /> // Set Twitter handle
+      <meta name="twitter:site" content={twitterUsername} /> // Set Twitter handle as site
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </Helmet>
   )
 }
 

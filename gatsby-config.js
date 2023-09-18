@@ -12,7 +12,7 @@ module.exports = {
     title: `Jack Crawford Robetson`,
     description: `Exploring how storytelling and narratives can unlock insights into complex systems like economics and politics. My work emphasizes playfulness and curiosity, using research and design to create engaging experiences that shed light on the systems that shape our lives.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://jack-robertson.co.uk/`, // Updated site URL
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -37,6 +37,16 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/Logo_Web.png`, 
+      },
+    },
+    // Add Google Tag Manager Plugin
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // The property ID; the tracking code won't be generated without this
+        trackingIds: [
+          "GTM-TKL73J5Q", // Replace with your GTM ID
+        ],
       },
     },
   ],
