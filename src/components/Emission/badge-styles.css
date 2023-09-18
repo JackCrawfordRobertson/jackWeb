@@ -1,0 +1,38 @@
+/* carbon-button-styles.css */
+.carbon-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #428bca;
+  padding: 3vh;
+  border-radius: 8px;
+  color: white;
+}
+
+.carbon-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carbon-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.website-carbon a {
+  text-decoration: none;
+  margin: 0;
+}
+
+.carbon-rating {
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+}
+
+.carbon-rating p {
+  margin: 0;
+}
