@@ -1,49 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-function CarbonFooter() {
-  const [carbonData, setCarbonData] = useState(null);
-  const [error, setError] = useState(null);
-
+function EmissionCalculator() {
   useEffect(() => {
-    const fetchCarbonData = async () => {
-      try {
-        const response = await fetch('https://API_ENDPOINT_HERE', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer YOUR_API_KEY_HERE',
-          },
-          body: JSON.stringify({
-            url: window.location.href, // Assuming you want to get data for the current website
-          }),
-        });
-
-        const data = await response.json();
-        if (data.error) {
-          setError(data.error);
-        } else {
-          setCarbonData(data); // Adjust the data path based on the API response structure
-        }
-      } catch (err) {
-        console.error('Error:', err);
-        setError('An error occurred. Please try again.');
-      }
-    };
-
-    fetchCarbonData();
+    // Load the carbon badge script
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/website-carbon-badges@1.1.3/b.min.js';
+    script.defer = true;
+    document.getElementById('wcb').appendChild(script);
   }, []);
 
-  return (
-    <footer>
-      {carbonData && (
-        <p>
-          This load of the website caused an estimated {carbonData.carbon_g} grams of CO2 emissions.
-          {/* Adjust the data path based on the API response structure */}
-        </p>
-      )}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-    </footer>
-  );
+  return <div id="wcb" class="carbonbadge wcb-d"></div>;
 }
 
-export default CarbonFooter;
+export default EmissionCalculator;
