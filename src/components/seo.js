@@ -12,7 +12,7 @@ function Seo({ description, title, children }) {
             description
             author
             siteUrl
-            twitterUsername // Add your Twitter handle here
+            twitterUsername
           }
         }
       }
@@ -22,7 +22,7 @@ function Seo({ description, title, children }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
   const url = site.siteMetadata.siteUrl
-  const twitterUsername = site.siteMetadata.twitterUsername // Retrieve Twitter handle
+  const twitterUsername = site.siteMetadata.twitterUsername
 
   return (
     <Helmet
@@ -37,8 +37,8 @@ function Seo({ description, title, children }) {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={twitterUsername} /> // Set Twitter handle
-      <meta name="twitter:site" content={twitterUsername} /> // Set Twitter handle as site
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
