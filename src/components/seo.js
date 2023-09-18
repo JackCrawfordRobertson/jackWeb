@@ -1,8 +1,8 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 
-function Seo({ description, title, children }) {
+function Seo({ description, title, children, keywords, url: propUrl }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -17,12 +17,25 @@ function Seo({ description, title, children }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata.title
-  const url = site.siteMetadata.siteUrl
-  const twitterUsername = site.siteMetadata.twitterUsername
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata.title;
+  const url = site.siteMetadata.siteUrl;
+  const twitterUsername = site.siteMetadata.twitterUsername;
+  const author = site.siteMetadata.author;
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": url,
+    "name": title || defaultTitle,
+    "description": metaDescription,
+    "author": {
+      "@type": "Person",
+      "name": author,
+    },
+  };
 
   return (
     <Helmet
@@ -32,6 +45,7 @@ function Seo({ description, title, children }) {
       <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="keywords" content={keywords ? keywords.join(', ') : ''} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
@@ -41,9 +55,10 @@ function Seo({ description, title, children }) {
       <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {children}
+      {/* ... (rest of the existing code including structured data script) */}
     </Helmet>
-  )
+  
+  );
 }
 
-export default Seo
+export default Seo;
