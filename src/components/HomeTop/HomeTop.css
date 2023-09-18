@@ -1,0 +1,83 @@
+.home-top-container {
+  color: white;
+  max-width: 100%; /* Set to 100% to take full width on mobile */
+  margin: 1em;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.subhead {
+  font-weight: 500;
+}
+
+.body-copy {
+  font-weight: normal;
+  text-align: left;
+}
+
+.body-copy a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.body-copy a:hover {
+  text-decoration: underline;
+}
+
+.sliderContainer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: none;
+  font-size: 24px;
+  color: white;
+  border-radius: .1em; /* Adjusted to use em unit */
+}
+
+@media (min-width: 768px) {
+  .home-top-container {
+    max-width: 33%; /* Set max-width to 33% for larger screens */
+  }
+
+  .sliderContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.slider {
+  width: 100px;
+  margin-left: 10px;
+  appearance: none;
+  background: transparent;
+  height: 1px;
+  border: 1px solid white;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.logo {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vh;
+  width: 5vw; /* Adjust as necessary */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1000; /* Ensure the logo appears above other elements */
+}
+

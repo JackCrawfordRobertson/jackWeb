@@ -1,0 +1,52 @@
+/* Set global font */
+/* in index.css */
+@import 'font-awesome/css/font-awesome.min.css';
+
+html { 
+  font-size: 3em; 
+  font-weight: 400; 
+  line-height: 1.6; 
+  scroll-behavior: smooth; 
+  scrollbar-width: none; 
+}
+
+body {
+  font-family: 'Inter', sans-serif; 
+  color: #f6f6f6; 
+  background-color: #3496d3;
+  overflow-y: auto; 
+
+  /* For Chrome, Safari */
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7); /* Corrected the color value */
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; 
+}
+
+a {
+  color: #ffffff; /* Making the link color white */
+  text-decoration: underline !important; /* Ensuring the underline is always present */
+}
+
+a:hover {
+  color: #ffffff; /* Keeping the link color white on hover */
+}
+
+a:active {
+  color: #ffffff; /* Keeping the link color white when active */
+}
+
+a:visited {
+  color: #ffffff; /* Keeping the link color white when visited */
+}
+
+p {
+  font-size: 1em; /* Universal font size for paragraph */
+}
+
