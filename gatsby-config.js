@@ -21,27 +21,45 @@ module.exports = {
     
     // Add the gatsby-plugin-sitemap configuration here
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        output: `/sitemap.xml`, // Define the output path for your sitemap
-        resolveSiteUrl: ({ site }) => {
-          return site.siteMetadata.siteUrl;
-        },
-        serialize: ({ site, allSitePage }) => {
-          if (allSitePage && allSitePage.nodes) {
-            return allSitePage.nodes.map(node => {
-              return {
-                url: `${site.siteMetadata.siteUrl}${node.path}`,
-                changefreq: "daily",
-                priority: 0.7,
-              };
-            });
-          } else {
-            return [];
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
           }
+        `,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return {
+              ...page,
+            };
+          });
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: 'daily',
+            priority: 0.7,
+          };
         },
       },
     },
+    
+    
+    
+    
+    
+    
+    
     
     {
       resolve: `gatsby-source-filesystem`,
@@ -56,8 +74,8 @@ module.exports = {
         name: `Jack Robertson's Portfolio`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#3496d3`,
+        theme_color: `#3496d3`,
         display: `minimal-ui`,
         icon: `src/images/Logo_Web.png`,
       },
