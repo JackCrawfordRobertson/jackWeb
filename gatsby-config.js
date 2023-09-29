@@ -3,7 +3,7 @@ module.exports = {
     title: `Jack Crawford Robertson`,
     description: `Exploring how storytelling and narratives can unlock insights into complex systems like economics and politics.`,
     author: `@JackRobert20033`,
-    siteUrl: `https://jack-robertson.co.uk/`, // Make sure this is the correct URL for your site
+    siteUrl: `https://jack-robertson.co.uk/`, 
     keywords: [
       "storytelling",
       "narratives",
@@ -18,49 +18,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    
-    // Add the gatsby-plugin-sitemap configuration here
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        query: `
-          {
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
-        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
-          return allPages.map(page => {
-            return {
-              ...page,
-            };
-          });
-        },
-        serialize: ({ path }) => {
-          return {
-            url: path,
-            changefreq: 'daily',
-            priority: 0.7,
-          };
-        },
-      },
-    },
-    
-    
-    
-    
-    
-    
-    
-    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -80,12 +37,11 @@ module.exports = {
         icon: `src/images/Logo_Web.png`,
       },
     },
-    
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://jack-robertson.co.uk/",
-        sitemap: "https://jack-robertson.co.uk/sitemap.xml", // Specify the URL to your sitemap
+        sitemap: "https://jack-robertson.co.uk/sitemap.xml", // It remains the same because the manual sitemap is at the same location
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
