@@ -71,10 +71,10 @@ const HomeTop = () => {
           that shape our lives.{" "}
           <i class="fa fa-object-group" aria-hidden="true"></i>
         </p>
-        <h2 className="subhead">What i'm doing.</h2>
+        <h2 className="subhead">What I'm doing.</h2>
         {/* what im doing now */}
         <p>
-          I've gone back to school! I am studdying an MA in Digital Direction at
+          I've gone back to school! I am studying an MA in Digital Direction at
           the <a href="https://www.rca.ac.uk/">Royal College of Art</a> where
           I'm planing to investigate water depletion as a consequence of climate
           change. <i className="fa fa-graduation-cap" aria-hidden="true"></i>{" "}
@@ -83,7 +83,7 @@ const HomeTop = () => {
           company to help them transition to an automation!{" "}
           <i className="fa fa-tint" aria-hidden="true"></i>
         </p>
-        <h2 className="subhead">What i've done.</h2>
+        <h2 className="subhead">What I've done.</h2>
         {/* Girardot */}
         <p>
           In 2022/2023, I was having fun at{" "}
@@ -92,7 +92,7 @@ const HomeTop = () => {
           Investors, Goldman Sachs, and Elmwood Warm Spaces. I was involved in
           the rebrand of the Royal Opera House and experimented with new ways of
           telling stories through branding and advertising. I'm proud of the
-          work we've done and feel chufed to have worked with such distinguished
+          work we've done and feel chugfed to have worked with such distinguished
           clients. <i class="fa fa-briefcase" aria-hidden="true"></i>
         </p>
         {/* Middel east */}
