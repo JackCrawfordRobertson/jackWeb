@@ -79,8 +79,8 @@ const HomeTop = () => {
           I'm planing to investigate water depletion as a consequence of climate
           change. <i className="fa fa-graduation-cap" aria-hidden="true"></i>{" "}
           <br></br>
-          <br></br>Alongside my studies, I'm also consulting a UK water suply
-          company to help them transition to an automation!{" "}
+          <br></br>Alongside my studies, I'm also consulting a UK water supply
+          company to help them on their transition to automation.{" "}
           <i className="fa fa-tint" aria-hidden="true"></i>
         </p>
         <h2 className="subhead">What I've done.</h2>
@@ -92,8 +92,9 @@ const HomeTop = () => {
           Investors, Goldman Sachs, and Elmwood Warm Spaces. I was involved in
           the rebrand of the Royal Opera House and experimented with new ways of
           telling stories through branding and advertising. I'm proud of the
-          work we've done and feel chugfed to have worked with such distinguished
-          clients. <i class="fa fa-briefcase" aria-hidden="true"></i>
+          work we've done and feel chugfed to have worked with such
+          distinguished clients.{" "}
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
         </p>
         {/* Middel east */}
         <p>
