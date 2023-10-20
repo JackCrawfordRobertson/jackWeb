@@ -36,6 +36,11 @@
   border-radius: .1em; /* Adjusted to use em unit */
 }
 
+.hover-link:hover {
+  color: red;  /* Replace 'desiredColor' with the color you want on hover, e.g., 'red' or '#ff0000'. */
+}
+
+
 @media (min-width: 768px) {
   .home-top-container {
     max-width: 33%; /* Set max-width to 33% for larger screens */

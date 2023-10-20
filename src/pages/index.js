@@ -1,5 +1,6 @@
 //Dependencies
 import * as React from "react"
+import { BrowserRouter } from 'react-router-dom';
 
 //Components
 import Seo from "../components/seo"
@@ -10,13 +11,15 @@ import "../styles/global.css"
 
 const Index = () => {
   return (
-    <div>
-      <Seo 
-        title="Home" 
-        description="Exploring how storytelling and narratives can unlock insights into complex systems like economics and politics."
-      />
-      <HomeTop/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Seo 
+          title="Home" 
+          description="Exploring how storytelling and narratives can unlock insights into complex systems like economics and politics."
+        />
+        <HomeTop/>
+      </div>
+    </BrowserRouter>
   )
 }
 

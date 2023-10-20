@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./HomeTop.css"
 import WorkCard from "../Work/WorkCard"
 import EmissionCalculator from "../Emission/EmissionCalculator"
+
 //import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 //Branding
@@ -92,9 +93,8 @@ const HomeTop = () => {
           Investors, Goldman Sachs, and Elmwood Warm Spaces. I was involved in
           the rebrand of the Royal Opera House and experimented with new ways of
           telling stories through branding and advertising. I'm proud of the
-          work we've done and feel chugfed to have worked with such
-          distinguished clients.{" "}
-          <i class="fa fa-briefcase" aria-hidden="true"></i>
+          work we've done and feel cuffed to have worked with such distinguished
+          clients. <i class="fa fa-briefcase" aria-hidden="true"></i>
         </p>
         {/* Middel east */}
         <p>
@@ -130,20 +130,20 @@ const HomeTop = () => {
               textDecoration: "underline",
             }}
           >
-            "A New Way of Seeing: Visualizing the Middle East Conflict,"
-          </span>
-          . In this work, I explore how information design can help us
+            "A New Way of Seeing: Visualizing the Middle East Conflict"
+          </span> In this work, I explore how information design can help us
           understand the human and political scale of the region's destruction
           and displacement. <i class="fa fa-circle" aria-hidden="true"></i>
         </p>
         {/* IOT */}
         <p>
-          My exploration in 2020 further led me to the texts of Jeremy Rifkin
-          text presents an overview of current social, economic and
-          technological transformations. His overarching narrative offers
-          exciting insights but is also a bit overwhelming. To help make his
-          ideas more accessible, I created{" "}
+          During 2020, Jeremy Rifkin's writings on the third industrial
+          revolution fueled me with a rich understanding of the dynamic social,
+          economic, and technological shifts underway. His overarching narrative
+          offers exciting insights but is also a bit overwhelming. To help make
+          his ideas more accessible, I created{" "}
           <span
+            
             onClick={() => handleLinkClick(IoTVid01, IoTVid02)} // Use the imported image variable here
             style={{
               cursor: "pointer",
@@ -163,9 +163,8 @@ const HomeTop = () => {
             role="button"
             tabIndex="0"
           >
-            "The Rifkin Lens: A Glimpse into What's Next,"{" "}
-          </span>
-          an interactive museum experience that families can explore from home.
+            "The Rifkin Lens: A Glimpse into What's Next" {" "}
+          </span> an interactive museum experience that families can explore from home.
           This allows them to engage with Rifkin's ideas and consider the
           implications for our future.{" "}
           <i class="fa fa-laptop" aria-hidden="true"></i>
@@ -195,7 +194,7 @@ const HomeTop = () => {
               textDecoration: "underline",
             }}
           >
-            "Explore Your City: Your Two-Hour Starter Kit,"
+            "Explore Your City: Your Two-Hour Starter Kit"
           </span>{" "}
           an interactive museum experience that allows students to use a
           two-hour access card for free use of Santander Cycles. This helps
@@ -243,6 +242,8 @@ const HomeTop = () => {
             onClose={handleCloseCard}
             isOpen={isCardOpen}
           />
+
+          <div></div>
         </div>
         <EmissionCalculator />
         <img src={BottomLogo} alt="Company Logo" className="logo" />
