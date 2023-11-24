@@ -3,7 +3,7 @@ module.exports = {
     title: `Jack Crawford Robertson`,
     description: `Exploring how storytelling and narratives can unlock insights into complex systems like economics and politics.`,
     author: `@JackRobert20033`,
-    siteUrl: `https://jack-robertson.co.uk/`, 
+    siteUrl: `https://jack-robertson.co.uk/`,
     keywords: [
       "storytelling",
       "narratives",
@@ -18,49 +18,10 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    
-    // Add the gatsby-plugin-sitemap configuration here
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        query: `
-          {
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
-        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
-          return allPages.map(page => {
-            return {
-              ...page,
-            };
-          });
-        },
-        serialize: ({ path }) => {
-          return {
-            url: path,
-            changefreq: 'daily',
-            priority: 0.7,
-          };
-        },
-      },
-    },
-    
-    
-    
-    
-    
-    
-    
-    
+
+    `gatsby-plugin-sitemap`,
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -95,4 +56,4 @@ module.exports = {
       },
     },
   ],
-};
+}
