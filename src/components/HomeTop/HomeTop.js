@@ -76,10 +76,15 @@ const HomeTop = () => {
         {/* what im doing now */}
         <p>
           I've gone back to school! I am studying an MA in Digital Direction at
-          the <a href="https://www.rca.ac.uk/">Royal College of Art</a> where
-          I'm planing to investigate water depletion as a consequence of climate
-          change. <i className="fa fa-graduation-cap" aria-hidden="true"></i>{" "}
-          <br></br>
+          the <a href="https://www.rca.ac.uk/">Royal College of Art</a> where I
+          am investigating how to streamline the pitching process between NGOs
+          and international donors, when secureing funding to addressing water
+          depletion as a consequence of climate change. The tool we are
+          developing is named Maya{" "}
+          <a href="https://maya.jack-robertson.co.uk">
+            and you can view it by clicking here.
+          </a>{" "}
+          <i className="fa fa-graduation-cap" aria-hidden="true"></i> <br></br>
           <br></br>Alongside my studies, I'm also consulting a UK water supply
           company to help them on their transition to automation.{" "}
           <i className="fa fa-tint" aria-hidden="true"></i>
@@ -131,9 +136,10 @@ const HomeTop = () => {
             }}
           >
             "A New Way of Seeing: Visualizing the Middle East Conflict"
-          </span> In this work, I explore how information design can help us
-          understand the human and political scale of the region's destruction
-          and displacement. <i class="fa fa-circle" aria-hidden="true"></i>
+          </span>{" "}
+          In this work, I explore how information design can help us understand
+          the human and political scale of the region's destruction and
+          displacement. <i class="fa fa-circle" aria-hidden="true"></i>
         </p>
         {/* IOT */}
         <p>
@@ -143,7 +149,6 @@ const HomeTop = () => {
           offers exciting insights but is also a bit overwhelming. To help make
           his ideas more accessible, I created{" "}
           <span
-            
             onClick={() => handleLinkClick(IoTVid01, IoTVid02)} // Use the imported image variable here
             style={{
               cursor: "pointer",
@@ -163,8 +168,9 @@ const HomeTop = () => {
             role="button"
             tabIndex="0"
           >
-            "The Rifkin Lens: A Glimpse into What's Next" {" "}
-          </span> an interactive museum experience that families can explore from home.
+            "The Rifkin Lens: A Glimpse into What's Next"{" "}
+          </span>{" "}
+          an interactive museum experience that families can explore from home.
           This allows them to engage with Rifkin's ideas and consider the
           implications for our future.{" "}
           <i class="fa fa-laptop" aria-hidden="true"></i>
@@ -224,6 +230,19 @@ const HomeTop = () => {
             blueprint for health equity.
           </i>
         </p>
+
+        <h2 className="subhead">Other Work.</h2>
+        <p>
+          Writing Work - <i>I have also started a new writing archive. You can
+          expect my insights on the systems I’m currently studying, such as
+          Climate, Water, Sustainability, and everything in between. My goal is
+          to cut through the complex and provide insightful introductions
+          <a href="https://written.jack-robertson.co.uk">
+            {" "}
+            which you can acsess by clicking here.
+          </a></i>
+        </p>
+
         <div className="sliderContainer">
           <i className="fa fa-text-height" aria-hidden="true"></i>
           <input
