@@ -207,6 +207,22 @@ const HomeTop = () => {
           students get to know the city and make connections with their new
           flatmates. <i class="fa fa-bicycle" aria-hidden="true"></i>
         </p>
+
+        <h2 className="subhead">Other Work.</h2>
+        <p>
+          Writing Work -{" "}
+          <i>
+            I have also started a new writing archive. You can expect my
+            insights on the systems I’m currently studying, such as Climate,
+            Water, Sustainability, and everything in between. My goal is to cut
+            through the complex and provide insightful introductions
+            <a href="https://written.jack-robertson.co.uk">
+              {" "}
+              which you can acsess by clicking here.
+            </a>
+          </i>
+        </p>
+
         <h2 className="subhead">Other collaborators.</h2>
         {/* All */}
         <p>
@@ -229,18 +245,6 @@ const HomeTop = () => {
             Shared resources, equal access, and community partnership - a
             blueprint for health equity.
           </i>
-        </p>
-
-        <h2 className="subhead">Other Work.</h2>
-        <p>
-          Writing Work - <i>I have also started a new writing archive. You can
-          expect my insights on the systems I’m currently studying, such as
-          Climate, Water, Sustainability, and everything in between. My goal is
-          to cut through the complex and provide insightful introductions
-          <a href="https://written.jack-robertson.co.uk">
-            {" "}
-            which you can acsess by clicking here.
-          </a></i>
         </p>
 
         <div className="sliderContainer">
