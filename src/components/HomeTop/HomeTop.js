@@ -229,21 +229,30 @@ const HomeTop = () => {
           ICEAwards -{" "}
           <i>
             The ICEAwards UK honor the best in-house corporate event planners
-            and celebrate their passion for excellence.{" "}
+            and celebrate their passion for excellence.{" "} <a href="https://ice-hub.biz/">
+              {" "}
+              Click here.
+            </a>
           </i>{" "}
           <br></br>
           <br></br>
           Capgemini -{" "}
           <i>
             University Week brings together the best in the corporate training
-            industry to collaborate and learn from each other.
+            industry to collaborate and learn from each other. <a href="https://ceeds.capgemini.com/index.html">
+              {" "}
+              Click here.
+            </a>
           </i>
           <br></br>
           <br></br>
-          Integrated Care System Cornwall -{" "}
+          NHS Integrated Care System Cornwall -{" "}
           <i>
             Shared resources, equal access, and community partnership - a
-            blueprint for health equity.
+            blueprint for health equity. <a href="https://cios.icb.nhs.uk/ics/">
+              {" "}
+              Click here.
+            </a>
           </i>
         </p>
 
