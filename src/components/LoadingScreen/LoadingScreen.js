@@ -13,7 +13,7 @@ const LoadingScreen = () => {
     });
   
     tl.fromTo(logoRef.current, 
-      { y: -100, autoAlpha: 0, scale: 0.5 }, // Starting from a smaller size
+      { y: -100, autoAlpha: 0, scale: 0.2 }, // Starting from a smaller size
       { y: 40, autoAlpha: 1, scale: 1 }) // Scale up to original size, adjust this to make it smaller if needed
       .to(logoRef.current, 
         { rotation: 360, scale: 1, duration: 1.5 }) // Keep at original size
