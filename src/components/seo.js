@@ -23,19 +23,7 @@ function Seo({ description, title, children, keywords, url: propUrl }) {
   const defaultTitle = site.siteMetadata.title;
   const url = site.siteMetadata.siteUrl;
   const twitterUsername = site.siteMetadata.twitterUsername;
-  const author = site.siteMetadata.author;
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "url": url,
-    "name": title || defaultTitle,
-    "description": metaDescription,
-    "author": {
-      "@type": "Person",
-      "name": author,
-    },
-  };
 
   return (
     <Helmet

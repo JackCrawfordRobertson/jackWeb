@@ -33,37 +33,27 @@ const WorkCard = ({ mediaUrls, onClose, isOpen }) => {
           },
         }}
       >
-        <button onClick={onClose} className="close-button">
-          Close
-        </button>
+        <button onClick={onClose} className="close-button">Close</button>
         <div className="media-container">
-          {mediaUrls?.[0] && (
-            <div className="media-item-0">
-              {mediaUrls[0].endsWith('.mp4') ? (
-                <video autoPlay loop muted className="media-item">
-                  <source src={mediaUrls[0]} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <img src={mediaUrls[0]} alt="Media" className="media-item" />
-              )}
-            </div>
-          )}
-
-          <div className="grid-container">
-            {mediaUrls?.slice(1).map((url, index) => (
-              <div key={index} className="media-item">
-                {url.endsWith('.mp4') ? (
-                  <video autoPlay loop muted className="media-item">
-                    <source src={url} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img src={url} alt={`Media ${index + 2}`} className="media-item" />
-                )}
-              </div>
-            ))}
-          </div>
+          {mediaUrls?.map((media, index) => {
+            // Check that media and media.src are defined
+            if (media && media.src) {
+              const isVideo = media.src.endsWith('.mp4');
+              return (
+                <div key={index} className="media-item">
+                  {isVideo ? (
+                    <video autoPlay loop muted className="media-item">
+                      <source src={media.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img src={media.src} alt={media.alt || `Media item ${index + 1}`} className="media-item" />
+                  )}
+                </div>
+              );
+            }
+            return null; // Or handle the undefined case as appropriate
+          })}
         </div>
       </Drawer>
     </ThemeProvider>
