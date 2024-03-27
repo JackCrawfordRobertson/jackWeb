@@ -21,9 +21,8 @@ function Seo({ description, title, children, keywords, url: propUrl }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata.title;
-  const url = site.siteMetadata.siteUrl;
+  const url = propUrl || site.siteMetadata.siteUrl; // Use propUrl if it's provided
   const twitterUsername = site.siteMetadata.twitterUsername;
-
 
   return (
     <Helmet
@@ -32,20 +31,23 @@ function Seo({ description, title, children, keywords, url: propUrl }) {
     >
       <html lang="en" />
       <title>{title}</title>
+      <link rel="canonical" href={url} />
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords ? keywords.join(', ') : ''} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
+      {/* Add the og:image tag */}
+      {/* <meta property="og:image" content={} /> */}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {/* ... (rest of the existing code including structured data script) */}
+      {/* <meta name="twitter:image" content={} /> */}
+      {children}
     </Helmet>
-  
   );
 }
 
