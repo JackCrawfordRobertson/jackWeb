@@ -15,7 +15,8 @@ body {
   color: #f6f6f6; 
   background-color: #3496d3;
   overflow-y: auto; 
-
+padding: 0;
+margin: 0;
   /* For Chrome, Safari */
   &::-webkit-scrollbar {
     width: 0px;
