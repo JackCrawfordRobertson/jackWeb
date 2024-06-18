@@ -83,6 +83,6 @@
   right: 2vh;
   width: 5vw; /* Adjust as necessary */
   height: auto; /* Maintain aspect ratio */
-  z-index: 1000; /* Ensure the logo appears above other elements */
+  z-index: 999; /* Ensure the logo appears above other elements */
 }
 

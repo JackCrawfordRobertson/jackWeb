@@ -53,6 +53,7 @@ const HomeTop = () => {
 
   return (
     <>
+      
       {loading && <LoadingScreen />}
 
       <div className="home-top-container" style={{ fontSize: `${fontSize}px` }}>
