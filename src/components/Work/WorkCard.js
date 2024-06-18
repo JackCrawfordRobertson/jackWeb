@@ -34,9 +34,8 @@ const WorkCard = ({ mediaUrls, onClose, isOpen }) => {
         }}
       >
         <button onClick={onClose} className="close-button">Close</button>
-        <div className="media-container">
+        <div className="grid-container">
           {mediaUrls?.map((media, index) => {
-            // Check that media and media.src are defined
             if (media && media.src) {
               const isVideo = media.src.endsWith('.mp4');
               return (
@@ -52,7 +51,7 @@ const WorkCard = ({ mediaUrls, onClose, isOpen }) => {
                 </div>
               );
             }
-            return null; // Or handle the undefined case as appropriate
+            return null;
           })}
         </div>
       </Drawer>
